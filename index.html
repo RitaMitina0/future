@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-1.11.2.js "></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;8979c688-341a-439f-9b8f-e73cebe0f303&gt;&amp;lang=ru_RU" type="text/javascript">   </script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="./js/form.js"></script>
+    <title>Тестовое задание</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+          <div class="overlay">
+            <div class="overlay__content">
+              <div class="overlay__content__header">
+                <div class="overlay__close">
+                  <div class="close__btn"></div>
+                </div><span class="overlay__title">Бронирование</span>
+              </div>
+              <form class="order__form">
+                <div class="form__content">
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Дата <span> * </span> </span>
+                      <input class="form-input" type="text" required value="14.09.2019">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Email <span> * </span> </span>
+                      <input class="form-input" type="text" value="" placeholder="Электронная почта" required>
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Имя <span> * </span> </span>
+                      <input class="form-input" type="text" required value="Иван">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Фамилия <span> * </span> </span>
+                      <input class="form-input" type="text" required value="Громов">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Телефон <span> * </span> </span>
+                      <input class="form-input" type="text" value="" placeholder="+7 (906) 184-81-40" required id="phone">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__block"><span class="form__block-title">Данные карты <span> * </span> </span>
+                      <input class="form-input" type="text" value="" placeholder="Номер карты" maxlength="16" required id="card-numder">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__input-union">
+                      <input class="form-input form-input--width" type="text" value="" placeholder="Срок действия" required>
+                      <input class="form-input form-input--width" type="text" value="" placeholder="CVV" required>
+                    </div>
+                  </div>
+                  <label class="form__block form__block--checkbox">
+                    <input class="form__ckb" type="checkbox">
+                    <div class="form__ckb-visible"></div><span class="form__ckb-title">Я согласен с пользовательским соглашением и публичной офертой</span>
+                  </label>
+                  <div class="form__button">
+                    <button class="send-btn" type="submit" action="#">Забронировать</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+      <div class="maincontent">
+        <header class="header">
+          <div class="container">
+            <div class="header__content">
+              <div class="logo"><a href="index.html"><img src="assets/logo.svg" alt="логотип"></a></div>
+              <div class="header__contacts"><span class="phone">Телефон: </span><a class="phone-number" href="tel:88001231212">8(800)-123-12-12</a></div><span class="location">Москва</span>
+              <div class="header__auth">
+                <button class="auth__btn"><img src="assets/person.svg" alt="личный кабинет"></button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main-content">
+          <section class="section banner">
+            <div class="container">
+              <div class="banner__centered">
+                <h1 class="page__title">
+                  Эксклюзивная <span> фотосессия </span> при полете на вертолете</h1>
+                <div class="cost__block">
+                  <div class="cost"> <span class="cost__title">Стоимость:</span><span class="cost-sum">1500</span></div>
+                  <div class="percent"><span class="percent-symbol">%</span></div>
+                </div>
+                <button class="reservation__button">Забронировать место</button>
+              </div>
+            </div>
+          </section>
+          <section class="section photoshoot">
+            <div class="container">
+              <div class="desc__block-up">
+                <div class="desc__block-up_left">
+                  <h2 class="section__title subtitle--size_adaptive">Фотосессия в вертолете</h2>
+                  <p class="section__desc">Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты</p>
+                  <div class="service_description">
+                    <ul class="service_description__list">
+                      <li class="service_description__item"><img class="service_description__img" src="assets/clock.svg"><span>3 часа съемки</span></li>
+                      <li class="service_description__item"><img class="service_description__img" src="assets/photo.svg"><span>Более 50 фотографий</span></li>
+                      <li class="service_description__item"><img class="service_description__img" src="assets/marker.svg"><span>Москва</span></li>
+                      <li class="service_description__item"><img class="service_description__img" src="assets/msg.svg"><span>Готовы ответить на любые вопросы</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="desc__block-up_right">
+                  <div class="player__block">
+                    <div id="yt-player"></div>
+                    <div class="player">
+                      <div class="player__bg"><img class="player-img" src="assets/first.png" alt="фоновое изображение видео"></div>
+                      <div class="player__control">
+                        <button class="player__start">
+                          <div class="start__icon"></div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rating rating--size rating--margin">
+                <div class="rating__title">
+                  <div class="rating__icon"><img class="rating-img" src="assets/cup.svg"/></div><span class="rating__text">Более  <b>   50   </b>  отзывов с оценкой</span>
+                </div>
+                <div class="rating_stars">
+                  <ul class="rating_stars__list">
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="photos">
+                <h3 class="subtitle subtitle subtitle--size_adaptive">Фотографии пакета:</h3>
+                <div class="photos__content">
+                  <ul class="photos__list single-item">
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery1.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery2.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery3.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery4.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery3.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery4.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery2.png"></li>
+                    <li class="photos__item item"><img class="photos-img" src="assets/gallery3.png"></li>
+                  </ul>
+                  <div class="add__button"> 
+                    <div class="arrow">  </div>
+                    <button class="add-photo__btn" type="submit">Показать все фото</button>
+                    <div class="arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section about">
+            <div class="container">
+              <div class="about__union">
+                <div class="about_left">
+                  <div class="about__desc">
+                    <h3 class="subtitle subtitle--size">Об организаторе: </h3>
+                    <p class="about__text">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь членом группы экспертов туристической отрасли, которые хорошо разбираются в маркетинге, операциях и услугах обслуживания клиентов, специализирующихся на совместном использовании и частных турах.</p>
+                    <p class="about__text">Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое соответствует бюджету и планам клиента. Мы никогда не зависим от субпоставщиков и не свяжемся…             </p>
+                    <div class="about__text_more">
+                      <div class="about__text-all">
+                        <p class="about__text about__text--all">Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое соответствует бюджету и планам клиента. Мы никогда не зависим от субпоставщиков и не свяжемся…             Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение, которое соответствует бюджету и планам клиента. Мы никогда не зависим от субпоставщиков и не свяжемся…             </p>
+                      </div><a class="more__link" href="#">Читать еще
+                        <div class="arrow"></div></a>
+                    </div>
+                  </div>
+                  <div class="about__desc">
+                    <h3 class="subtitle subtitle--size">Что я предоставлю: </h3>
+                    <p class="about__text">Встречу вас на машине после длительного перелёта. Качественный подбор места и локации для вашей съемки. При необходимости всегда возможно прерваться на обед/ужин. Более 50 фотографий на выходе с обработкой и замечательные впечатления о Дубае!</p>
+                    <div class="about__text_more"> 
+                      <div class="about__text-all">
+                        <p class="about__text about__text--all"> Встречу вас на машине после длительного перелёта. Качественный подбор места и локации для вашей съемки. При необходимости всегда возможно прерваться на обед/ужин. Более 50 фотографий на выходе с обработкой и замечательные впечатления о Дубае! Встречу вас на машине после длительного перелёта. Качественный подбор места и локации для вашей съемки. При необходимости всегда возможно прерваться на обед/ужин. Более 50 фотографий на выходе с обработкой и замечательные впечатления о Дубае!</p>
+                      </div><a class="more__link" href="#">Читать еще
+                        <div class="arrow"></div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="about_right">
+                  <div class="user">
+                    <div class="user__photo"><img class="user__pht" src="assets/user.png" alt="фотограф"></div><span class="user__name">Марина Иванова</span><span class="user__prof">Фотограф</span><a class="user__more-info user__more-info--align" href="#">Показать больше <br> информации о фотографе</a>
+                  </div>
+                  <div class="heart-icon"><img class="h-icon" src="assets/heart.svg" alt="иконка сердечко"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section shooting-date">
+            <div class="container">
+              <h3 class="subtitle subtitle--margin subtitle--size_adaptive">
+                Доступная съемка в ближайшее время:</h3>
+              <div class="shooting-date__block">
+                <div class="current-date__block"><span class="current-date">Пятница, 14 сентября </span>
+                  <button class="calendar__icon">
+                    <div class="calendar__img"><img class="c-icon" src="assets/calendar.svg" alt="календарь"></div>
+                  </button>
+                </div>
+                <ul class="available-dates__list">
+                  <li class="available-dates__item">
+                    <div class="available-dates__item_text"><span class="time">15:00 - 18:00</span><span class="price"><b> 1500₽ </b></span><span class="comment">Осталось - 1 место</span></div>
+                    <button class="select-btn">Выбрать</button>
+                  </li>
+                  <li class="available-dates__item">
+                    <div class="available-dates__item_text"><span class="time">19:00 - 22:00</span><span class="price"><b> 1500₽ </b></span><span class="comment">Осталось - 1 место</span></div>
+                    <button class="select-btn">Выбрать</button>
+                  </li>
+                </ul>
+                <div class="rating rating--border-none">
+                  <div class="rating__title">
+                    <div class="rating__icon"><img class="rating-img" src="assets/cup.svg"/></div><span class="rating__text">Более  <b>   50   </b>  отзывов с оценкой</span>
+                  </div>
+                  <div class="rating_stars">
+                    <ul class="rating_stars__list">
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                      <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"/></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section map">
+            <div class="y-map" id="map">
+              <div class="map__union">
+                <div class="map__content">
+                  <ul class="map__content__list">
+                    <li class="map__content__item"><span class="item_number">1</span>
+                      <div class="item_info"><span>Где встречаемся?</span><span>Москва</span></div>
+                    </li>
+                    <li class="map__content__item"><span class="item_number">2</span>
+                      <div class="item_info"><span>Время съемки</span><span>3 часа</span></div>
+                    </li>
+                    <li class="map__content__item"><span class="item_number">3</span>
+                      <div class="item_info"><span>Мест осталось</span><span>2</span></div>
+                    </li>
+                    <li class="map__content__item">
+                      <div class="item_contact">
+                        <div class="user user--row">
+                          <div class="user__photo user__photo--size user__photo--margin"><img class="user__pht user__photo--size" src="assets/user.png" alt="фотограф"></div>
+                          <div class="user__info">
+                            <div class="user__name">Марина Иванова</div>
+                            <div class="user__prof user__prof--size">Фотограф</div><a class="user__more-info" href="#">Показать больше информации</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section comments">
+            <div class="container">
+              <h3 class="subtitle subtitle--size_adaptive">Отзывы: </h3>
+              <ul class="comments__list">
+                <li class="comments__item">
+                  <article class="comment">
+                    <div class="user__photo user__photo--comments-size"><img class="user__pht" src="assets/person1.png" alt="комментатор"></div>
+                    <div class="comment__data"><span class="user__name">Валерия Антонова</span><span class="user__prof">Арт-директор</span>
+                      <div class="comment__rating">
+                        <div class="rating_stars">
+                          <ul class="rating_stars__list">
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                          </ul>
+                        </div>
+                        <div class="rating__text">
+                          <div class="checkbox"></div><span>Супер! Я бы заказала съемку снова!   </span>
+                        </div>
+                      </div>
+                      <p class="comment-text">Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p><span class="comment-date">27 Апреля, 2019г.</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="comments__item">
+                  <article class="comment">
+                    <div class="user__photo user__photo--comments-size"><img class="user__pht" src="assets/person2.png" alt="комментатор"></div>
+                    <div class="comment__data"><span class="user__name">Виталий Петров</span><span class="user__prof">Фотограф</span>
+                      <div class="comment__rating">
+                        <div class="rating_stars">
+                          <ul class="rating_stars__list">
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                          </ul>
+                        </div>
+                        <div class="rating__text">
+                          <div class="checkbox"></div><span>Супер! Я бы заказала съемку снова!   </span>
+                        </div>
+                      </div>
+                      <p class="comment-text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление. Организация полёта отличная. Спасибо! </p><span class="comment-date">19 Апреля, 2019г.</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="comments__item">
+                  <article class="comment">
+                    <div class="user__photo user__photo--comments-size"><img class="user__pht" src="assets/person3.png" alt="комментатор"></div>
+                    <div class="comment__data"><span class="user__name">Джим Керри</span><span class="user__prof">Арт-директор</span>
+                      <div class="comment__rating">
+                        <div class="rating_stars">
+                          <ul class="rating_stars__list">
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                            <li class="rating_stars__item"><img class="rating__star-icon" src="assets/star.svg"></li>
+                          </ul>
+                        </div>
+                        <div class="rating__text">
+                          <div class="checkbox"></div><span>Супер! Я бы заказала съемку снова!   </span>
+                        </div>
+                      </div>
+                      <p class="comment-text">Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и сытными))Мы с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p><span class="comment-date">11 Апреля, 2019г.</span>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="footer-up">
+            <div class="container">
+              <div class="footer__content footer__content--position">
+                <div class="logo"><a href="index.html"><img src="assets/logo.svg" alt="логотип"></a></div>
+                <div class="social">
+                  <ul class="social__list">
+                    <li class="social__item"><a class="social__link" href="#"><img src="assets/vk.svg" alt="вк"></a></li>
+                    <li class="social__item"><a class="social__link" href="#"><img src="assets/Facebook.svg" alt="фейсбук"></a></li>
+                    <li class="social__item"><a class="social__link" href="#"><img src="assets/Instragram.svg" alt="инстаграм"></a></li>
+                  </ul>
+                  <div class="language">RU
+                    <div class="arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-down">
+            <div class="container">
+              <div class="footer__content">
+                <div class="pay-systems"> 
+                  <ul class="pay-systems__list">
+                    <li class="pay-systems__item"><a class="pay-systems__link" href="#"><img src="assets/MC.svg" alt="мастер кард"></a></li>
+                    <li class="pay-systems__item"><a class="pay-systems__link" href="#"><img src="assets/VISA.svg" alt="виза"></a></li>
+                  </ul>
+                </div>
+                <div class="footnote"><span>Тех. поддержка: 8(800)700-00-00</span><span>© 2018 HELYFLY. All Rights Reserved.</span></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div><script src="https://www.youtube.com/iframe_api"></script>
+<script src="./js/video.js"></script>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/main.js"></script></body>
+</html>
